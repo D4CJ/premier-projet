@@ -16,9 +16,9 @@ public class VoitureTest {
         Voiture voiture2 = new Voiture("Audi", 20000);
         voiture2.setId(2);
 
-        Assert.isTrue(voiture1.getMarque().equals("Volkswagen"),"Normalement c'est Volkswagen");
-        Assert.isTrue(voiture1.getMarque()!="Gabin","Normalement c'est Volkswagen");
-        //Assert.isTrue(voiture1.getId() != voiture2.getId(), "ce n'est pas les mêmes"); 
+        assertTrue(voiture1.getMarque()=="Volkswagen");
+        assertTrue(voiture1.getMarque()!="Gabin");
+        assertTrue(voiture1.getId() != voiture2.getId()); 
     }
 
 }
