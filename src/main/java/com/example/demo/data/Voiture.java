@@ -7,10 +7,20 @@ import javax.persistence.Id;
 
 @Entity
 public class Voiture {
-    int id;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    String marque;
+    int prix;
+    int id;
+    int i;
+
+    public Voiture(){
+    }
+
+    public Voiture(String marque, int prix) {
+        this.marque = marque;
+        this.prix = prix;
+    }
+
     public int getId() {
         return id;
     }
@@ -19,10 +29,28 @@ public class Voiture {
         this.id = id;
     }
 
+    public String getMarque() {
+        return marque;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
+    }
+
     @Override
     public String toString() {
-        return "Voiture{" +
-                "id=" + id +
+        return "Car{" +
+                "marque='" + marque + '\'' +
+                ", prix=" + prix +
+                ", id=" + id +
                 '}';
     }
 }
