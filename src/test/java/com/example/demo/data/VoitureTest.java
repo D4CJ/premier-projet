@@ -1,22 +1,20 @@
+package com.example.demo.data;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 public class VoitureTest {
 
     @Test
-    void testVoiture() {
-
+    void voiture_test() {
+        // 1. Instanciation
         Voiture voiture1 = new Voiture("Volkswagen", 15000);
         voiture1.setId(1);
 
         Voiture voiture2 = new Voiture("Audi", 20000);
         voiture2.setId(2);
 
-        assertTrue(voiture1.getMarque().equals("Volkswagen"));
-        assertTrue(!voiture1.getMarque().equals("Gabin"));
-        assertTrue(voiture1.getId() != voiture2.getId());
+        assertEquals("Volkswagen", voiture1.getMarque());
+        assertNotEquals("Gabin", voiture1.getMarque());
+        assertNotEquals(voiture1.getId(), voiture2.getId());
     }
-
 }
