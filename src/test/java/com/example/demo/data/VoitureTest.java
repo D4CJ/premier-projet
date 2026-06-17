@@ -2,7 +2,7 @@ package com.example.demo.data;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
+import com.example.demo.web.VoitureException;
 
 public class VoitureTest {
 
