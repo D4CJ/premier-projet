@@ -17,6 +17,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -60,6 +62,21 @@ class WebTests {
 
         mockMvc.perform(get("/statistique")).andExpect(status().isBadRequest());
         
+    }
+
+    // J'ai rajouter ces deux tests pour améliorer la couverture. C'est le tp4.
+
+    @Test
+    public void test_get_bonjour() throws Exception {
+        mockMvc.perform(get("/bonjour"))
+               .andExpect(status().isOk())
+               .andExpect(content().string("Bonjour"));
+    }
+
+    @Test
+    public void test_get_voiture() throws Exception {
+        mockMvc.perform(get("/voiture"))
+               .andExpect(status().isOk());
     }
      
 }
