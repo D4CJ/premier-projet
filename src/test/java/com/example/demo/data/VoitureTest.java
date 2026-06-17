@@ -1,6 +1,8 @@
 package com.example.demo.data;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.example.demo.web.VoitureException;
 
 public class VoitureTest {
 
@@ -17,4 +19,16 @@ public class VoitureTest {
         assertNotEquals("Gabin", voiture1.getMarque());
         assertNotEquals(voiture1.getId(), voiture2.getId());
     }
+
+
+
+    // J'ai ajouter ce teste pour améliorer la couverture. C'est le tp4.
+    @Test
+    public void test_voiture_exception() {
+        
+        VoitureException voiture_exception = new VoitureException();
+        assertNotNull(voiture_exception); 
+    }
+
+    
 }
