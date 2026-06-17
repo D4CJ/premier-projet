@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+
 public class VoitureTest {
 
     @Test
@@ -19,7 +20,6 @@ public class VoitureTest {
         assertNotEquals(voiture1.getId(), voiture2.getId());
     }
 
-    import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
     // J'ai ajouter ce teste pour améliorer la couverture. C'est le tp4.
